@@ -9,34 +9,35 @@ export default function ClothingEdit() {
 
     const API = process.env.REACT_APP_API_URL
 
-    const [clothes, setClothes] = useState({
+    const [designer, setDesigner] = useState({
         designer_id: 0,
-        style: "",
-        color: "",
-        size: 0,
-        is_recycled_item: "",
+        first_name: "",
+        last_name: "",
+        brand_name: "",
+        years_in_industry: "",
         material: "",
         price: 0,
         ranking: 0,
         image: "",
     });
+    //designer_id  first_name brand_name years_in_industry country   price_point  image 
 
     useEffect(() => {
-        axios.get(`${API}/clothing/${id}`).then((response) => {
-            setClothes(response.data);
+        axios.get(`${API}/designer/${id}`).then((response) => {
+            setDesigner(response.data);
         });
     }, [id]);
 
     const handleChange = (event) => {
-        setClothes({ ...clothes, [event.target.name]: event.target.value });
+        setDesigner({ ...designer, [event.target.name]: event.target.value });
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
         axios
-            .put(`http://localhost:3033/clothing/${id}`, clothes)
+            .put(`${API}/designer/${id}`, designer)
             .then((response) => {
-                navigate(`/clothing/${id}`);
+                navigate(`/designer/${id}`);
             })
             .catch((err) => {
                 console.log(err);
@@ -47,20 +48,20 @@ export default function ClothingEdit() {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Style</label>
+                    <label>Name</label>
                     <input
                         type="text"
                         name="style"
-                        value={clothes.style}
+                        value={designer.first_name}
                         onChange={handleChange}
                     />
                 </div>
                 <div>
-                    <label>Color</label>
+                    <label>Brand Name</label>
                     <input
                         type="text"
                         name="color"
-                        value={clothes.color}
+                        value={designer.brand_name}
                         onChange={handleChange}
                     />
                 </div>
@@ -69,53 +70,37 @@ export default function ClothingEdit() {
                     <input
                         type="text"
                         name="size"
-                        value={clothes.size}
+                        value={designer.size}
                         onChange={handleChange}
                     />
                 </div>
                 <div>
-                    <label>Is a Recycled Item</label>
+                    <label>Years in Industry</label>
                     <input
                         type="text"
                         name="is_available"
-                        value={clothes.is_recycled_item}
+                        value={designer.years_in_industry}
                         onChange={handleChange}
                     />
                 </div>
+
                 <div>
-                    <label>Material</label>
-                    <input
-                        type="text"
-                        name="material"
-                        value={clothes.material}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label>Price</label>
+                    <label>Price Point</label>
                     <input
                         type="text"
                         name="price"
-                        value={clothes.price}
+                        value={designer.price_point}
                         onChange={handleChange}
                     />
                 </div>
-                <div>
-                    <label>Ranking</label>
-                    <input
-                        type="text"
-                        name="price"
-                        value={clothes.ranking}
-                        onChange={handleChange}
-                    />
-                </div>
+
                 <div>
                     <label>Image</label>
                     <input
                         type="text"
                         pattern="http[s]*://.+"
                         name="image"
-                        value={clothes.image}
+                        value={designer.image}
                         onChange={handleChange}
                     />
                 </div>

@@ -21,12 +21,16 @@ export default function Clothing() {
     return (
         <div className="Clothing">
             <section>
-                <h2>Explore the Captivating World of Black Fashion Designers</h2>
-                <p>DRP: Embrace the DRIP, Love the DROP</p>
+                <h2>Explore the World of Black Fashion Designers</h2>
+                <h3>DRP: Embrace the DRIP, Love the DROP</h3>
                 <table>
-
+                    <thead>
+                        <tr>
+                            <th className="message">Discover Unique and Stylish Designs</th>
+                        </tr>
+                    </thead>
                     <tbody className="map-image">
-                        {clothing.map((clothes) => (
+                        {Array.isArray(clothing) && clothing.map((clothes) => (
                             <Clothes key={clothes.id} clothes={clothes} />
                         ))}
                     </tbody>

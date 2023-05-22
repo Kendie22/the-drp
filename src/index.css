@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.clothes-image img{
+width: 150px;
+height: 200px;
+}
+
+.map-image{
+  display: grid;
+  gap: 80px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px 20px 15px 5px;
+}

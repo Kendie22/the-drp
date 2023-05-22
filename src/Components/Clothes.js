@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 
 
 export default function Clothes({ clothes }) {
-    // console.log(clothes.id)
     return (
-        <tr>
+        <tr key={clothes.id}>
             <td>
                 <Link to={`/clothing/${clothes.clothing_id}`}>
 

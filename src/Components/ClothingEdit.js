@@ -34,7 +34,7 @@ export default function ClothingEdit() {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios
-            .put(`http://localhost:3033/clothing/${id}`, clothes)
+            .put(`${API}/clothing/${id}`, clothes)
             .then((response) => {
                 navigate(`/clothing/${id}`);
             })

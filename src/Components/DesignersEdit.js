@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function ClothingEdit() {
+export default function DesignersEdit() {
     let { id } = useParams();
     const navigate = useNavigate();
 
@@ -17,7 +17,6 @@ export default function ClothingEdit() {
         years_in_industry: "",
         material: "",
         price: 0,
-        ranking: 0,
         image: "",
     });
     //designer_id  first_name brand_name years_in_industry country   price_point  image 

@@ -12,6 +12,9 @@ export default function NavBar() {
                 <Link to="/clothing/new">New Drops</Link>
             </button>
             <button>
+                <Link to="/designers/">Designers</Link>
+            </button>
+            <button>
                 <Link to="/clothing/about"> Meet the Developer</Link>
             </button>
         </nav>

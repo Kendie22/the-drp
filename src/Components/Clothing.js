@@ -2,10 +2,10 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Clothes from "./Clothes";
 
-const API = process.env.REACT_APP_API_URL;
 
 export default function Clothing() {
     const [clothing, setClothing] = useState([]);
+    const API = process.env.REACT_APP_API_URL;
 
     useEffect(() => {
         axios

@@ -28,3 +28,144 @@ height: 200px;
   width: 20px;
   height: 20px;
   }
+
+
+  @media (max-width: 600px) {
+    .map-image {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .clothes-image img {
+      width: 100px;
+      height: 150px;
+    }
+  
+    .designer-image img {
+      width: 15px;
+      height: 15px;
+    }
+  
+    .new-form,
+    .edit-form {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .new-form input[type="text"],
+    .edit-form input[type="text"] {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .map-image {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+  
+    .clothes-image img {
+      width: 120px;
+      height: 180px;
+    }
+  
+    .designer-image img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .map-image {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 80px;
+    }
+  
+    .clothes-image img {
+      width: 150px;
+      height: 200px;
+    }
+  
+    .designer-image img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+
+.new-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.new-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.new-form input[type="text"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.new-form input[type="submit"] {
+  background-color: #4c90af;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.edit-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.edit-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.edit-form div {
+  margin-bottom: 15px;
+}
+
+.edit-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #dc10d9;
+  border-radius: 4px;
+}
+
+.edit-form button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-form button[type="submit"]:hover {
+  background-color: #7145a0;
+}
+/* 
+.clothing-inventory {
+  width: 20px;
+  height: 20px;
+  } */

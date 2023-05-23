@@ -56,6 +56,7 @@ export default function DesignersDetails() {
 
                 <button onClick={() => handleDelete(designers.designer_id)} className="edit-button">Delete</button>
             </div>
+
         </div>
     )
 };

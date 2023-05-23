@@ -39,8 +39,8 @@ export default function ClothingDetails() {
     }
 
     return (
-        <div className="clothing-inventory">
-            <img src={clothing.image} alt="clothing pic" />
+        <div className="clothing-inventory" >
+            <img src={clothing.image} alt="clothing pic" style={{ maxWidth: "150px", maxHeight: "200px" }} />
 
             {<h5> Brand Name: {clothing.brand_name}, Style: {clothing.style}, Size: {clothing.size}, Color: {clothing.color}, Material: {clothing.material}, Price: ${clothing.price}, {" "} {clothing.is_recycled_item ? "Ranking" : "Not Ranking"} </h5>}
 

@@ -40,7 +40,7 @@ export default function ClothingNewForm() {
 
     return (
         <div className="Designer">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="new-form">
                 <label htmlFor="style">Style:</label>
                 <input
                     id="style"

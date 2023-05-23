@@ -45,7 +45,7 @@ export default function ClothingEdit() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='edit-form'>
                 <div>
                     <label>Style</label>
                     <input

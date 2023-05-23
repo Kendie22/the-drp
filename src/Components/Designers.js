@@ -46,13 +46,13 @@ export default function Designers() {
 
 
 
-                <table>
+                {/* <table>
                     <tbody className="designers-map-image">
                         {designers.map((designer) => (
                             <Designer key={designer.id} designer={designer} />
                         ))}
                     </tbody>
-                </table>
+                </table> */}
             </section>
         </div>
     );

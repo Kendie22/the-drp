@@ -23,3 +23,8 @@ height: 200px;
   grid-template-columns: repeat(4, 1fr);
   padding: 40px 20px 15px 5px;
 }
+
+.designer-image img{
+  width: 20px;
+  height: 20px;
+  }

@@ -15,6 +15,9 @@ import Show from "./Pages/Show";
 import NavBar from "./Components/NavBar";
 import About from "./Components/About.js";
 import Designers from './Components/Designers';
+import Designer from './Components/Designer';
+
+
 
 export default function App() {
   return (
@@ -30,7 +33,8 @@ export default function App() {
             <Route path="/Clothing/:id/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} />
             <Route path="/Clothing/about" element={<About />} />
-            <Route path="/Clothing/:clothing_id/Designer" element={<Designers />} />
+            <Route path="/Designers" element={<Designers />} />
+            <Route path="/designer/:id" element={<Designer />} />
 
           </Routes>
         </main>

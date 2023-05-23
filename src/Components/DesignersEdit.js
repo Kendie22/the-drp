@@ -7,7 +7,7 @@ export default function DesignersEdit() {
     let { id } = useParams();
     const navigate = useNavigate();
 
-    const API = process.env.REACT_APP_API_URL
+    const API = process.env.REACT_APP_API_URL;
 
     const [designer, setDesigner] = useState({
         designer_id: 0,
@@ -19,13 +19,12 @@ export default function DesignersEdit() {
         price: 0,
         image: "",
     });
-    //designer_id  first_name brand_name years_in_industry country   price_point  image 
 
     useEffect(() => {
         axios.get(`${API}/designer/${id}`).then((response) => {
             setDesigner(response.data);
         });
-    }, [id]);
+    }, [API, id]);
 
     const handleChange = (event) => {
         setDesigner({ ...designer, [event.target.name]: event.target.value });
@@ -47,54 +46,61 @@ export default function DesignersEdit() {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Name</label>
+                    <label htmlFor="first_name">First Name</label>
                     <input
                         type="text"
-                        name="style"
+                        name="first_name"
                         value={designer.first_name}
                         onChange={handleChange}
                     />
                 </div>
                 <div>
-                    <label>Brand Name</label>
+                    <label htmlFor="last_name">Last Name</label>
                     <input
                         type="text"
-                        name="color"
+                        name="last_name"
+                        value={designer.last_name}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="brand_name">Brand Name</label>
+                    <input
+                        type="text"
+                        name="brand_name"
                         value={designer.brand_name}
                         onChange={handleChange}
                     />
                 </div>
                 <div>
-                    <label>Size</label>
+                    <label htmlFor="years_in_industry">Years in Industry</label>
                     <input
                         type="text"
-                        name="size"
-                        value={designer.size}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label>Years in Industry</label>
-                    <input
-                        type="text"
-                        name="is_available"
+                        name="years_in_industry"
                         value={designer.years_in_industry}
                         onChange={handleChange}
                     />
                 </div>
-
                 <div>
-                    <label>Price Point</label>
+                    <label htmlFor="material">Material</label>
                     <input
                         type="text"
-                        name="price"
-                        value={designer.price_point}
+                        name="material"
+                        value={designer.material}
                         onChange={handleChange}
                     />
                 </div>
-
                 <div>
-                    <label>Image</label>
+                    <label htmlFor="price">Price</label>
+                    <input
+                        type="text"
+                        name="price"
+                        value={designer.price}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="image">Image</label>
                     <input
                         type="text"
                         pattern="http[s]*://.+"
@@ -108,8 +114,3 @@ export default function DesignersEdit() {
         </div>
     );
 }
-
-
-
-
-

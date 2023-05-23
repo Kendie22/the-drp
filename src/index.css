@@ -164,8 +164,6 @@ height: 200px;
 .edit-form button[type="submit"]:hover {
   background-color: #7145a0;
 }
-/* 
-.clothing-inventory {
-  width: 20px;
-  height: 20px;
-  } */
+p {
+  font-family: Arial, sans-serif;
+}

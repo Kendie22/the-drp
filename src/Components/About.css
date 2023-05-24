@@ -1,0 +1,48 @@
+/* About.css */
+.mtd {
+    font-size: 24px;
+    color: #ff6b6b;
+  }
+
+  
+  .Kerridene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .dev-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .bio-name {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333333;
+  }
+  
+  .bio-text-ks {
+    text-align: center;
+    margin-top: 10px;
+    color: #666666;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+  }
+  

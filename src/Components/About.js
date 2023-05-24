@@ -8,11 +8,10 @@ const About = () => {
     return (
         <div >
             <h3 className='mtd'>Meet The Dev!</h3>
-            <div className='team-about'>
-            </div>
+
             <div className='Kerridene'>
                 <img
-                    className="team-photo"
+                    className="dev-photo"
                     src="https://avatars.githubusercontent.com/u/115031259?v=4"
                     alt="Kerridene Small"
                 ></img>
@@ -21,10 +20,21 @@ const About = () => {
                     <em>Kerridene Small</em>
                 </h4>
                 <p className="bio-text-ks">
-                    I'm a Full Stack Developer with a background in education. I was born in Jamaica, WI but currently live in Brooklyn, NY.
-                    My favorite hat is chef's hat because I love cooking for my friends and family.
-                    Please check out my links below to connect with me.
+                    I'm a Full Stack Developer with a background in education. Originally from Jamaica, WI, I'm currently based in the vibrant city of Brooklyn, NY.
+
+                    <br /><br />
+
+                    - Inspired by my sister's passion for fashion, I decided to pay tribute to her in this project by highlighting black fashion designers.
+
+                    - With my expertise in Full Stack Development, I strive to create innovative and user-friendly solutions for complex problems.
+
+                    - Feel free to explore the links below to connect with me, learn more about my work, or discuss potential collaborations.
+
+                    <br /><br />
+
+                    Don't hesitate to reach out if you have any questions or exciting project ideas. Let's create something amazing together!
                 </p>
+
                 <a href="https://github.com/Kendie22">
                     <img
                         className="icon"

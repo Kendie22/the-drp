@@ -1,11 +1,12 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
 export default function ClothingNewForm() {
     let navigate = useNavigate();
+
 
     const addClothes = (newClothes) => {
         axios
@@ -20,7 +21,7 @@ export default function ClothingNewForm() {
     };
 
     const [clothes, setNewClothes] = useState({
-        designer_id: 0,
+        designer_id: 2,
         style: "",
         color: "",
         size: 0,
@@ -29,6 +30,20 @@ export default function ClothingNewForm() {
         image: "",
     });
 
+    const [designers, setDesigners] = useState([])
+    useEffect(() => {
+        axios
+            .get(`${API}/designers`)
+            .then((response) => {
+                setDesigners(response.data.allDesigners);
+            })
+            .catch((error) => {
+                console.error("Error fetching designers:", error);
+            });
+    }, []);
+    const brandName = designers.map((d) =>
+        d.brand_name
+    )
     const handleTextChange = (event) => {
         setNewClothes({ ...clothes, [event.target.id]: event.target.value });
     };
@@ -41,6 +56,26 @@ export default function ClothingNewForm() {
     return (
         <div className="Designer">
             <form onSubmit={handleSubmit} className="new-form">
+
+                <label htmlFor="brand-name" className="form-label">
+                    Brand Name:
+                </label>
+                <select
+                    className="form-select"
+                    id="brand-name"
+                    name="brand-name"
+                    value={designers.brand_name}
+                // onChange={handleTextChange}
+                >
+
+                    <option value="">Select Brand Name</option>
+                    {brandName.map((size) => (
+                        <option key={size} value={size}>
+                            {size}
+                        </option>
+                    ))}
+                </select>
+
                 <label htmlFor="style">Style:</label>
                 <input
                     id="style"

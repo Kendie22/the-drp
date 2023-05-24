@@ -74,7 +74,7 @@ export default function ClothingEdit() {
                     />
                 </div>
                 <div>
-                    <label>Is a Recycled Item</label>
+                    <label>Is Recycled Item</label>
                     <input
                         type="text"
                         name="is_available"

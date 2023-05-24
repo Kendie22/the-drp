@@ -77,6 +77,24 @@ export default function ClothingNewForm() {
                     placeholder="Material"
                     onChange={handleTextChange}
                 />
+                <label htmlFor="price">Is Recycled:</label>
+                <input
+                    id="price"
+                    type="text"
+                    name="price"
+                    placeholder="Price"
+                    value={clothes.is_recycled_item}
+                    onChange={handleTextChange}
+                />
+                <label htmlFor="price">Ranking:</label>
+                <input
+                    id="price"
+                    type="text"
+                    name="price"
+                    placeholder="Price"
+                    value={clothes.ranking}
+                    onChange={handleTextChange}
+                />
                 <label htmlFor="price">Price:</label>
                 <input
                     id="price"

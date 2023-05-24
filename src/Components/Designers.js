@@ -23,8 +23,9 @@ export default function Designers() {
     const handleFilterChange = (event) => {
         setFilter(event.target.value);
     };
-
-    const filteredDesigners = designers.filter((designer) => {
+    // change filter useState variable name
+    //filter designers by first character of their name (sting is an array of characters)
+    const getDesigners = designers.filter((designer) => {
         const fullName = `${designer.first_name} ${designer.last_name}`;
         return (
             fullName.toLowerCase().includes(filter.toLowerCase()) || // Customize the filter condition
@@ -47,7 +48,7 @@ export default function Designers() {
                 />
 
                 <ul>
-                    {filteredDesigners.map((designer, index) => (
+                    {getDesigners.map((designer, index) => (
                         <div key={index}>
                             <Link to={`/designer/${designer.designer_id}`}>
                                 <img

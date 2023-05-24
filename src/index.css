@@ -167,3 +167,10 @@ height: 200px;
 p {
   font-family: Arial, sans-serif;
 }
+
+th.message {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}

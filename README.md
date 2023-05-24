@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# The---DRP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to The DRP App Backend Repo! It is a web application built using the PERN stack (PostgreSQL, Express.js, React.js, and Node.js) that simplifies the process of online shopping. This backend server provides the necessary API endpoints to handle product and category management.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Key Features](#key-features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Development Process](#development-process)
+- [Deployment](#deployment)
+- [Installation](#installation)
+- [API Endpoints](#api-endpoints)
+- [License](#license)
 
-### `npm start`
+## Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Add a product: Users can easily add a new product to their favorite category, providing details such as the product's name, description, price, color, size, type, and image URL.
+- View all products: Users can browse through a comprehensive list of products in each category.
+- Delete a product: Users have the ability to remove a product from a category if needed.
+- Update a product: Users can modify the details of an existing product, such as changing the name, description, price, color, size, type, or image URL.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Trello Board](https://trello.com/b/mcroqXDk/fullstack-portfolio-project)
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The DRP App backend leverages the following technologies and frameworks:
 
-### `npm run build`
+- PostgreSQL
+- Express.js
+- Node.js
+- Dotenv
+- Nodemon
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend Dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- express: ^4.17.1
+- pg: ^8.7.1
+- sequelize: ^6.10.0
+- sequelize-cli: ^6.2.0
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+The project follows a modular structure to ensure code organization and maintainability. It consists of separate frontend and backend directories. The backend utilizes schema and seed files to set up and populate the database with initial data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Development Process
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get started with the development of the Modesty Apparel App:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. One team member creates the repository and sets up the initial project structure.
+2. The other team members clone the repository to their local machines.
+3. Collaborate using pair programming or assign tasks on the Trello board.
+4. Regularly communicate, share progress, and seek assistance when needed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
 
-## Learn More
+The backend server is deployed on Render and can be accessed at [The DRP Backend](https://the-drp-backend.onrender.com). The frontend application is deployed on Netlify and can be accessed at [The DRP Frontend](https://starlit-scone-e34993.netlify.app/).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To install and run the Modesty Apparel App locally, follow these steps:
 
-### Code Splitting
+1. Clone this repository:
+   git clone The Modesty Apparel Backend Repo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Navigate to the project directory:
+   cd the-table-app
 
-### Analyzing the Bundle Size
+3. Install the backend dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+cd the-table/backend
+npm install express pg dotenv nodemon cors --save
 
-### Making a Progressive Web App
+4. Install the frontend dependencies:
+   npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Set up the PostgreSQL database by executing the schema and seed files:
+   psql -f db/schema.sql
+   psql -f db/seed.sql
 
-### Advanced Configuration
+6. Start the backend server:
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The backend server will run on [The DRP localhost Backend](http://localhost:3300).
 
-### Deployment
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- GET /api/categories: Get all categories.
+- GET /api/categories/:id: Get a specific category by ID.
+- POST /api/categories: Create a new category.
+- PUT /api/categories/:id: Update an existing category by ID.
+- DELETE /api/categories/:id: Delete a category by ID.
 
-### `npm run build` fails to minify
+- GET /api/categories/:categoryId/products: Get all products in a category.
+- GET /api/categories/:categoryId/products/:productId: Get a specific product in a category.
+- POST /api/categories/:categoryId/products: Create a new product in a category.
+- PUT /api/categories/:categoryId/products/:productId: Update an existing product in a category.
+- DELETE /api/categories/:categoryId/products/:productId: Delete a product in a category.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under [Pursuit](https://www.pursuit.org/).
+5:43
+
+# Welcome to The Table Fontend Repo
+
+[Netlify Link](https://starlit-scone-e34993.netlify.app/)
+
+## Table of Contents
+
+- _Technologies used_
+- _Frontend Dependencies_
+- _License_
+
+## Technologies Used
+
+The DRP App leverages the following technologies and frameworks:
+
+## [Github](https://github.com/)
+
+### Frontend Repo:
+
+[The Frontend Repo](https://github.com/Kendie22/the-drp.git)
+
+## Frontend Frame work
+
+- React.js
+- React Router
+- Axios
+
+- Canva (for creating beautiful designs)
+
+### Frontend Dependencies:
+
+- react: ^17.0.2
+- react-dom: ^17.0.2
+- react-router-dom: ^5.3.0
+  react-dom
+- axios: ^0.21.1
+
+## Installing dependencies frontend
+
+- npm install react react-dom
+- npm i react-router-dom axios
+
+# Frontend dependencies
+
+## cd client/the table frontend repo
+
+- npm install
+
+## Set up the environment variables:
+
+- Create a .env file in the project root.
+- Define the required environment variables, such as the database connection string, API keys, etc.
+- gitnore which allows you to specify files or directories that should be excluded from version control.

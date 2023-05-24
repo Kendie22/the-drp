@@ -16,7 +16,7 @@ export default function Clothing() {
             .catch((error) => {
                 console.error("Error fetching clothing:", error);
             });
-    }, []);
+    }, [API]);
 
     const handleFilterChange = (event) => {
         setFilter(event.target.value);

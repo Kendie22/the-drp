@@ -33,7 +33,7 @@ export default function Designer() {
             <p>Is Sustainable: {designer.is_sustainable ? "Yes" : "No"}</p>
             <p>Country: {designer.country}</p>
             <p>Price Point: {designer.price_point}</p>
-            <img src={designer.image} alt="designer-pic" />
+            <img src={designer.image} alt="designer-pic" style={{ maxWidth: "150px", maxHeight: "200px" }} />
 
             <Link to="/designers">Go Back to Designers</Link>
         </div>
